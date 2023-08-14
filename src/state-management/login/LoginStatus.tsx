@@ -1,4 +1,4 @@
-import useLogin from "./hooks/useLogin";
+import useLogin from "./useLogin";
 
 const LoginStatus = () => {
   // const [user, setUser] = useState('');
