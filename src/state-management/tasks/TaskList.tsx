@@ -1,5 +1,8 @@
-import useLogin from "./hooks/useLogin";
-import useTasks from "./hooks/useTasks";
+import { useContext } from "react";
+import useLogin from "../hooks/useLogin";
+import TasksContext from "./tasksContext";
+
+const useTasks = () => useContext(TasksContext);
 
 const TaskList = () => {
   // const [tasks, setTasks] = useState<Task[]>([]);
