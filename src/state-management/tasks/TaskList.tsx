@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import useLogin from "../login/useLogin";
+import useLoginStore from "../login/store";
 import TasksContext from "./tasksContext";
 
 const useTasks = () => useContext(TasksContext);
@@ -7,11 +7,11 @@ const useTasks = () => useContext(TasksContext);
 const TaskList = () => {
   // const [tasks, setTasks] = useState<Task[]>([]);
   const { tasks, dispatch } = useTasks();
-  const { user } = useLogin();
+  const { username } = useLoginStore();
 
   return (
     <>
-      <p>User: {user}</p>
+      <p>User: {username}</p>
       <button
         onClick={() =>
           dispatch({
